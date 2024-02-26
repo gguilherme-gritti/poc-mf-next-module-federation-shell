@@ -14,12 +14,20 @@ const Home = dynamic(
   }
 );
 
+const Cart = dynamic(
+  () => import("cart/component/Cart").then((m) => m.Cart),
+  {
+    ssr: false,
+  }
+);
+
 export default function Default() {
   return (
     <>
       <h1>Micro-frontends Polirepo Next JS </h1>
       <Header />
       <Home />
+      {/* <Cart /> */}
     </>
   );
 }
